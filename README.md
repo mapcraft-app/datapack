@@ -1,4 +1,4 @@
-![logo](https://gitlab.com/cbertran/mapcraft/-/raw/master/icon.png "Logo")
+![logo](https://gitlab.com/cbertran/mapcraft-datapack/-/raw/main/icon.png "Logo")
 
 ## Mapcraft-datapack is the api allowing Mapcraft software to interact with Minecraft Java Edition
 
@@ -6,7 +6,7 @@
 ### <span>&#x26a0;</span> If you wish to have access to all the possibilities offered by Mapcraft, download [the application](https://gitlab.com/cbertran)
 
 Nevertheless you can use it as is, but you will only have access to the *editing* and *drawing* tools.
-1. Download the latest stable version [here](https://gitlab.com/cbertran/mapcraft/-/releases), and install it in the ``datapacks`` folder of your world.
+1. Download the latest stable version [here](https://gitlab.com/cbertran/mapcraft-datapack/-/releases), and install it in the ``datapacks`` folder of your world.
 2. Download the latest stable version of Mapcraft base resource pack [here](https://gitlab.com/cbertran), and install it in the ``resourcepacks`` folder of your directory game.
 
 ## Developer(s)
