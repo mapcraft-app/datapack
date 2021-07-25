@@ -1,0 +1,2 @@
+tellraw @s [{"translate":"MC.command.trigger","with":[{"selector":"@s"}]},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorX1"}},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorY1"}},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorZ1"}},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorX2"}},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorY2"}},{"text":" "},{"score":{"name":"@s","objective":"MC_CursorZ2"}}]
+function mapcraft:built_in/gui/tab/trigger/main

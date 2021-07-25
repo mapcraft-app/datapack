@@ -1,0 +1,6 @@
+execute as @e[tag=Cursor,tag=One,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorX1 run data get entity @s Pos[0]
+execute as @e[tag=Cursor,tag=One,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorY1 run data get entity @s Pos[1]
+execute as @e[tag=Cursor,tag=One,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorZ1 run data get entity @s Pos[2]
+execute as @e[tag=Cursor,tag=Two,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorX2 run data get entity @s Pos[0]
+execute as @e[tag=Cursor,tag=Two,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorY2 run data get entity @s Pos[1]
+execute as @e[tag=Cursor,tag=Two,tag=Allowed_Movement] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID store result score @p[distance=0] MC_CursorZ2 run data get entity @s Pos[2]
