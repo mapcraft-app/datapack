@@ -1,4 +1,3 @@
-#"in" is an angle in degrees; "out" is the sine of the angle scaled up by 100
 scoreboard players operation Input2 MC_Calc = Input MC_Calc
 function mapcraft:built_in/math/wrap_angle
 function mapcraft:built_in/math/absolute

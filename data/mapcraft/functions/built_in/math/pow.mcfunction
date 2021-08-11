@@ -1,4 +1,3 @@
-#"math_in" is a base; "math_exp" is an exponent; "math_out" is the base to the power of the exponent
 scoreboard players operation Input2 MC_Calc = Temp1 MC_Calc
 scoreboard players set Output MC_Calc 1
 execute if score Temp1 MC_Calc matches ..-1 run scoreboard players set Output MC_Calc 0
