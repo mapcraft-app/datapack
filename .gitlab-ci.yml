@@ -9,9 +9,10 @@ build:
     - echo "Building stage"
     - echo "${CI_JOB_ID}" > CI_JOB_ID.txt
     - echo $CI_COMMIT_TAG > TAG_VERSION.txt
+    - echo -n "${CI_COMMIT_TAG}" > version
     - apt update && apt upgrade -y
     - apt install -y zip
-    - zip -r datapack.zip icon.png LICENSE pack.mcmeta README.md data
+    - zip -r datapack.zip icon.png LICENSE pack.mcmeta README.md data version
   artifacts:
     paths:
       - CI_JOB_ID.txt
