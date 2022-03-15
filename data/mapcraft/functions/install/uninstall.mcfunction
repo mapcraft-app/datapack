@@ -86,6 +86,7 @@
         fill 1 3 -1 -1 6 1 minecraft:stone
 	# Tags
 		tag @e[type=player] remove Select
+		tag @e[type=player] remove Draw
 		tag @e[type=player] remove MC_Edit
 		tag @e[type=player] remove Copy
 		tag @e[type=player] remove CopyZoneCreate

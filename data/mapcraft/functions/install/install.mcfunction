@@ -103,6 +103,7 @@
 		setblock 0 6 0 minecraft:air
 	# Tags
 		tag @e[type=player] add Select
+		tag @e[type=player] remove Draw
 		tag @e[type=player] remove MC_Edit
 		tag @e[type=player] remove Copy
 		tag @e[type=player] remove CopyZoneCreate
