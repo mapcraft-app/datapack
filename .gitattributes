@@ -1,0 +1,14 @@
+* text=auto
+
+*.mcfunction text
+*.mcmeta text
+*.nbt text
+*.md text
+*.json text
+*.yml text
+.gitattributes text
+LICENSE text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
