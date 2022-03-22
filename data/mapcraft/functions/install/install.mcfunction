@@ -26,7 +26,15 @@
 	scoreboard objectives add MC_PlayerTargetX dummy
 	scoreboard objectives add MC_PlayerTargetY dummy
 	scoreboard objectives add MC_PlayerTargetZ dummy
-	
+# Moving entity
+	scoreboard objectives add MC_IsMove dummy
+	scoreboard objectives add MC_IsMoveNewX dummy
+	scoreboard objectives add MC_IsMoveNewY dummy
+	scoreboard objectives add MC_IsMoveNewZ dummy
+	scoreboard objectives add MC_IsMoveOldX dummy
+	scoreboard objectives add MC_IsMoveOldY dummy
+	scoreboard objectives add MC_IsMoveOldZ dummy
+
 # Cursor
 	# Click
 		scoreboard objectives add MC_CursorClick dummy

@@ -1,10 +1,15 @@
-summon minecraft:magma_cube ~ ~ ~ {Size:1,CustomName:'{"text":"Cursor"}',CustomNameVisible:0b,Tags:["EntityEdition","Cursor","Allowed_Movement"],PersistenceRequired:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,AbsorptionAmount:2147483647f,Health:2147483647f,Attributes:[{Name:"generic.max_health",Base:2147483647}],Glowing:1b,NoAI:1b,ActiveEffects:[{Id:11b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:12b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:13b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:14b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:24b,Amplifier:0b,Duration:72000,ShowParticles:0b}]}
+summon minecraft:magma_cube ~ ~ ~ {Size:1,CustomName:'{"text":"Cursor"}',CustomNameVisible:0b,Tags:["EntityEdition","Cursor","Allowed_Movement","CheckIsMove"],PersistenceRequired:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,AbsorptionAmount:2147483647f,Health:2147483647f,Attributes:[{Name:"generic.max_health",Base:2147483647}],Glowing:1b,NoAI:1b,ActiveEffects:[{Id:11b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:12b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:13b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:14b,Amplifier:0b,Duration:72000,ShowParticles:0b},{Id:24b,Amplifier:0b,Duration:72000,ShowParticles:0b}]}
 execute store result entity @e[tag=Cursor,tag=Allowed_Movement,distance=..2,limit=1] Attributes[0].Base double 1 run scoreboard players get @s MC_PlayerID
 
 # Add color code for cursor
 execute if score @s MC_CursorClick matches 0 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add One
 execute if score @s MC_CursorClick matches 1 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add Two
 execute if score @s MC_CursorClick matches 4 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add Copy
+
+# Add correct tag to Cursor One
+execute if score @s MC_FillBlock matches 0 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add DrawAll
+execute if score @s MC_FillBlock matches 1 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add DrawAir
+execute if score @s MC_FillBlock matches 2 run tag @e[tag=Cursor,tag=Allowed_Movement,distance=..2] add DrawBlock
 
 # Place Unique ID of player on Attributes[0].Base (generic.armor)
 execute store result entity @e[tag=Cursor,tag=Allowed_Movement,distance=..2,limit=1] Attributes[0].Base double 1 run scoreboard players get @s MC_PlayerID

@@ -17,6 +17,14 @@
 	scoreboard objectives remove MC_Trigger
 	scoreboard objectives remove MC_LastTrigger
 	scoreboard objectives remove MC_Cutscene
+# Moving entity
+	scoreboard objectives remove MC_IsMove
+	scoreboard objectives remove MC_IsMoveNewX
+	scoreboard objectives remove MC_IsMoveNewY
+	scoreboard objectives remove MC_IsMoveNewZ
+	scoreboard objectives remove MC_IsMoveOldX
+	scoreboard objectives remove MC_IsMoveOldY
+	scoreboard objectives remove MC_IsMoveOldZ
 # Cursor
 	# Click
 		scoreboard objectives remove MC_CursorClick
