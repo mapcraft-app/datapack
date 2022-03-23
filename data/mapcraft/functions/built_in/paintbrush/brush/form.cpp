@@ -4,6 +4,7 @@
 #include <cmath>
 #include <fstream>
 #include <sstream>
+#include <ftw.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #define INV(x) x * -1
@@ -69,12 +70,84 @@ void cube(int width, std::string dir)
 				cloneCommand.clear();
 				cloneCommand = "clone ";
 				cloneCommand += (isInside(x, y, z, point)) ? "~ -63 ~ ~ -63 ~" : "~ -64 ~ ~ -64 ~";
-				cloneCommand += " " + position + " replace force";
+				cloneCommand += " " + position + "replace force";
 				air << "execute if block " << position << "#minecraft:air run " << cloneCommand << std::endl;
 				block << "execute unless block " << position << "#minecraft:air run " << cloneCommand << std::endl;
 				all << cloneCommand << std::endl;
 			}
 		}
+	}
+	air.close();
+	all.close();
+	block.close();
+}
+
+void diamond(int width, std::string dir)
+{
+	std::string layerTemp, position, cloneCommand;
+	int temp = std::floor(width / 2), middle = std::ceil(static_cast<double>(width) / 2.0);
+	int layer = 1, size = 1;
+	t_point point;
+	bool inverse = false;
+
+	std::string ssair(dir.c_str()), ssall(dir.c_str()), ssblock(dir.c_str());
+	ssair += "/air.mcfunction"; ssall += "/all.mcfunction"; ssblock += "/block.mcfunction";
+	std::fstream air(ssair.c_str(), std::fstream::out | std::fstream::trunc);
+	std::fstream all(ssall.c_str(), std::fstream::out | std::fstream::trunc);
+	std::fstream block(ssblock.c_str(), std::fstream::out | std::fstream::trunc);
+
+	point.x1 = INV(temp);
+	point.x2 = temp;
+	point.y1 = INV(temp);
+	point.y2 = temp;
+	point.z1 = INV(temp);
+	point.z2 = temp;
+
+	for (int y = point.y1; y <= point.y2; y++)
+	{
+		layerTemp.clear(); layerTemp = "# "; layerTemp += itoa(layer++);
+		air << layerTemp << std::endl;
+		all << layerTemp << std::endl;
+		block << layerTemp << std::endl;
+		std::cout << "SIZE:" << size << std::endl;
+		for (int z = point.z1; z <= point.z2; z++)
+		{
+			int radius = size - 1;
+			int Xmin = INV(radius), Xmax = radius;
+
+			for (int x = point.x1; x <= point.x2; x++)
+			{
+				if ((x < min || x > max) || (z < min || z > max))
+					continue;
+				
+				
+				if ((x > point.x1 && x < point.x2)
+					&& (y > point.y1 && y < point.y2)
+					&& (z > point.z1 && z < point.z2))
+					return true;
+				return false; 
+				
+				
+				std::cout << x << "_" << y << "_" << z << std::endl;
+				
+				position.clear();
+				position = "~" + itoa(x);
+				position += " ~" + itoa(y);
+				position += " ~" + itoa(z);
+				position += " ";
+				cloneCommand.clear();
+				cloneCommand = "clone ";
+				cloneCommand += ((x == min || x == max) && (y == min || y == max)) ? "~ -63 ~ ~ -63 ~" : "~ -64 ~ ~ -64 ~";
+				cloneCommand += " " + position + "replace force";
+
+				air << "execute if block " << position << "#minecraft:air run " << cloneCommand << std::endl;
+				block << "execute unless block " << position << "#minecraft:air run " << cloneCommand << std::endl;
+				all << cloneCommand << std::endl;
+			}
+		}
+		if (size == middle)
+			inverse = true;
+		size += (!inverse) ? 1 : -1;
 	}
 	air.close();
 	all.close();
@@ -115,6 +188,6 @@ int main(int argc, char **argv)
 	else if (type == "cube")
 		cube(width, directory);
 	else if (type == "diamond")
-		;
+		diamond(width, directory);
 	return 0;
 }
