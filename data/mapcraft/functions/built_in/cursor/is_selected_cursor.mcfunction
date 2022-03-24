@@ -4,6 +4,7 @@
 #		- 2: 15blocks
 #		- 3: Raycast
 #
+
 execute as @e[tag=ClickDetection] if score @s MC_CursorTemp = @p[distance=0] MC_PlayerID run function mapcraft:built_in/cursor/click_detection
 
 # TP entity
