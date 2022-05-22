@@ -12,8 +12,8 @@ jobs:
   build:
     runs-on: debian-latest
     steps:
-      - name: Build datapack
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Install dependencies && build
         run: |
           apt update
           apt install -y zip
