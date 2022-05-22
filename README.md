@@ -1,6 +1,7 @@
-![logo](https://github.com/mapcraft-app/datapack/blob/main/icon.png "Logo")
-
-## Mapcraft-datapack is the datapack allowing Mapcraft software to interact with Minecraft Java Edition
+<h1 align="center">
+    <img height="250" src="icon.png" alt=""><br/>
+    Mapcraft datapack is the official data pack of Mapcraft
+</h1>
 
 ## Setup
 ### <span>&#x26a0;</span> If you wish to have access to all the possibilities offered by Mapcraft, download [the application](https://github.com/mapcraft-app/mapcraft)
