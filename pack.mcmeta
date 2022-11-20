@@ -1,6 +1,10 @@
 {
+	"version": {
+		"datapack": "0.7.3-alpha",
+		"minecraft": "1.19"
+	},
 	"pack": {
-		"pack_format": 9,
+		"pack_format": 10,
 		"description": "Official Mapcraft Datapack by Vex345"
 	}
 }
