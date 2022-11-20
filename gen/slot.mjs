@@ -9,7 +9,7 @@ readFile(resolve('.', process.argv[2]), { encoding: 'utf-8', flag: 'r' })
 		const path = resolve('.', 'data', 'mapcraft', 'functions', 'built_in', 'player', 'get_block');
 		const code = (block, diff = undefined) => `execute if entity @s[nbt={Inventory:[{Slot:${id},id:"minecraft:${block}"}]}] run setblock ~ ~ ~ minecraft:${diff ?? block}`;
 
-		blocks.push({ name: 'lava_bucket' }, { name: 'powder_snow_bucket' }, { name: 'water_bucket' })
+		blocks.push({ name: 'lava_bucket' }, { name: 'water_bucket' })
 		blocks.sort((a, b) => {
 			const A = a.name.toLowerCase();
 			const B = b.name.toLowerCase();
@@ -27,11 +27,20 @@ readFile(resolve('.', process.argv[2]), { encoding: 'utf-8', flag: 'r' })
 				case 'lava_bucket':
 					ret.push(code(block.name, 'lava'))
 					break;
-				case 'powder_snow_bucket':
-					ret.push(code(block.name, 'powder_snow'))
+				case 'powder_snow':
+					ret.push(code('powder_snow_bucket', block.name))
 					break;
 				case 'water_bucket':
 					ret.push(code(block.name, 'water'))
+					break;
+				case 'end_portal':
+					ret.push(code('ender_eye', block.name));
+					break;
+				case 'nether_portal':
+					ret.push(code('nether_wart', block.name));
+					break;
+				case 'sweet_berry_bush':
+					ret.push(code('sweet_berries', block.name));
 					break;
 				default:
 					ret.push(code(block.name));
