@@ -1,6 +1,6 @@
 {
-	"version": {
-		"datapack": "0.7.3-alpha",
+	"mapcraft": {
+		"version": "0.8.1-alpha",
 		"minecraft": "1.19"
 	},
 	"pack": {
