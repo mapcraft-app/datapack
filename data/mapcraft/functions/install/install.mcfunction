@@ -10,9 +10,6 @@
 ##		MC_[Green,Blue,Yellow,Purple,Red,NoClip]
 ##
 
-# Main
-	scoreboard objectives add MC_Main dummy
-	scoreboard players set Tick MC_Main 0
 # Calc
 	scoreboard objectives add MC_Calc dummy
 	function mapcraft:built_in/math/reset

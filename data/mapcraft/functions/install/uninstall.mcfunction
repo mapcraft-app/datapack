@@ -1,7 +1,5 @@
 ## /!\ Do not made any change of this file /!\
 
-# Main
-	scoreboard objectives remove MC_Main
 # Calc
 	scoreboard objectives remove MC_Calc
 # Player
