@@ -98,6 +98,11 @@
 	scoreboard objectives add MC_MusicTime dummy
 # Cutscene
 	scoreboard objectives add MC_Cutscene dummy
+	scoreboard objectives add MC_CutsceneSaveX dummy
+	scoreboard objectives add MC_CutsceneSaveY dummy
+	scoreboard objectives add MC_CutsceneSaveZ dummy
+	scoreboard objectives add MC_CutsceneSaveRx dummy
+	scoreboard objectives add MC_CutsceneSaveRy dummy
 
 # Miscellaneous
 	# Create buffer zone
