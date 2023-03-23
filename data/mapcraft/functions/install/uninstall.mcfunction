@@ -12,9 +12,6 @@
 	scoreboard objectives remove MC_PlayerTargetX
 	scoreboard objectives remove MC_PlayerTargetY
 	scoreboard objectives remove MC_PlayerTargetZ
-	scoreboard objectives remove MC_Trigger
-	scoreboard objectives remove MC_LastTrigger
-	scoreboard objectives remove MC_Cutscene
 # Moving entity
 	scoreboard objectives remove MC_IsMove
 	scoreboard objectives remove MC_IsMoveNewX
@@ -81,15 +78,23 @@
 		scoreboard objectives remove MC_CopyPointY
 		scoreboard objectives remove MC_CopyPointZ
 # Trigger
+	scoreboard objectives remove MC_Trigger
+	scoreboard objectives remove MC_LastTrigger
 	scoreboard objectives remove MC_SaveTrigger
 # Music
 	scoreboard objectives remove MC_Music
 	scoreboard objectives remove MC_MusicTime
+# Cutscene
+	scoreboard objectives remove MC_Cutscene
+	scoreboard objectives remove MC_CutsceneSaveX
+	scoreboard objectives remove MC_CutsceneSaveY
+	scoreboard objectives remove MC_CutsceneSaveZ
+	scoreboard objectives remove MC_CutsceneSaveRx
+	scoreboard objectives remove MC_CutsceneSaveRy
 
 # Miscellaneous
 	# Buffer zone
-		fill 1 0 -1 -1 2 1 minecraft:bedrock
-        fill 1 3 -1 -1 6 1 minecraft:stone
+    fill 1 3 -1 -1 6 1 minecraft:stone
 	# Tags
 		tag @e[type=player] remove Select
 		tag @e[type=player] remove Draw
@@ -99,6 +104,7 @@
 	# Bossbar
 		bossbar remove mapcraft:progress
 	# Team
+		team remove MC_White
 		team remove MC_Green
 		team remove MC_DarkBlue
 		team remove MC_Blue

@@ -7,7 +7,7 @@
 ##			Position [5blocks, 10blocks, 15blocks]
 ##			Raycast [In, On]
 ##	Team:
-##		MC_[Green,Blue,Yellow,Purple,Red,NoClip]
+##		MC_[White,Green,Blue,Yellow,Purple,Red,NoClip]
 ##
 
 # Calc
@@ -31,7 +31,6 @@
 	scoreboard objectives add MC_IsMoveOldX dummy
 	scoreboard objectives add MC_IsMoveOldY dummy
 	scoreboard objectives add MC_IsMoveOldZ dummy
-
 # Cursor
 	# Click
 		scoreboard objectives add MC_CursorClick dummy
@@ -123,6 +122,8 @@
 		bossbar set mapcraft:progress players @e[tag=MC_Edit,type=minecraft:player]
 		bossbar set mapcraft:progress visible false
 	# Team
+		team add MC_White
+		team modify MC_White color white
 		team add MC_Green
 		team modify MC_Green color green
 		team add MC_DarkBlue
