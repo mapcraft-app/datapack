@@ -20,7 +20,6 @@
 		execute as @e[type=player] at @s run function mapcraft:built_in/music/main
 # Player cutscene system
 		execute as @e[tag=Cutscene,tag=!Camera] at @s unless score @s MC_Cutscene = @s MC_Cutscene run scoreboard players set @s MC_Cutscene 0
-		execute as @e[tag=Cutscene,tag=!Camera] at @s unless score @s MC_CutsceneTime = @s MC_CutsceneTime run scoreboard players set @s MC_CutsceneTime 0
 		execute as @e[tag=Cutscene,tag=!Camera] at @s run function mapcraft:built_in/cutscene/main
 # Move entity checker
 		execute as @e[tag=CheckIsMove] at @s run function mapcraft:built_in/is_move/main
