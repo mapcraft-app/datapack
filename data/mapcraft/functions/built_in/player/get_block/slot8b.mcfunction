@@ -1,4 +1,4 @@
-# 1.19
+# Slot 8b - 1.19.4
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:acacia_button"}]}] run setblock ~ ~ ~ minecraft:acacia_button
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:acacia_fence"}]}] run setblock ~ ~ ~ minecraft:acacia_fence
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:acacia_fence_gate"}]}] run setblock ~ ~ ~ minecraft:acacia_fence_gate
@@ -282,6 +282,7 @@ execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:furnace"}]}] run set
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:gilded_blackstone"}]}] run setblock ~ ~ ~ minecraft:gilded_blackstone
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:glass"}]}] run setblock ~ ~ ~ minecraft:glass
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:glass_pane"}]}] run setblock ~ ~ ~ minecraft:glass_pane
+execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:glow_berries"}]}] run setblock ~ ~ ~ minecraft:cave_vines_plant
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:glow_lichen"}]}] run setblock ~ ~ ~ minecraft:glow_lichen
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:glowstone"}]}] run setblock ~ ~ ~ minecraft:glowstone
 execute if entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:gold_block"}]}] run setblock ~ ~ ~ minecraft:gold_block
