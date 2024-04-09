@@ -14,7 +14,7 @@ Nevertheless you can use it as is, but you will only have access to the *editing
 - Clément Bertrand [(@c-bertran)](https://github.com/c-bertran)
 
 ## License
-    Mapcraft Copyright (C) 2020 - 2022  Clément Bertrand
+    Mapcraft Copyright (C) 2020 - 2024  Clément Bertrand
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
