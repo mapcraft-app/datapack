@@ -62,7 +62,7 @@
 		scoreboard objectives add MC_FillTempY dummy
 		scoreboard objectives add MC_FillCompareX dummy
 		scoreboard objectives add MC_FillCompareY dummy
-		scoreboard objectives add MC_FillID dummy 
+		scoreboard objectives add MC_FillID dummy
 		scoreboard objectives add MC_FillType dummy
 		scoreboard objectives add MC_FillBlock dummy
 		scoreboard objectives add MC_FillShape dummy
