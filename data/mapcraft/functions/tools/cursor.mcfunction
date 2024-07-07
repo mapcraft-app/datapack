@@ -1,1 +1,0 @@
-give @s minecraft:diamond_sword{display:{Name:'{"translate":"MC.tool.cursor"}'},Unbreakable:1b,Damage:1,type:cursor} 1

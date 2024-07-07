@@ -1,2 +1,0 @@
-# Title
-	title @s actionbar [{"text":"X: ","color":"reset"},{"score":{"name":"@s","objective":"MC_VolumeX"},"color":"gold"},{"text":" Y: ","color":"reset"},{"score":{"name":"@s","objective":"MC_VolumeY"},"color":"gold"},{"text":" Z: ","color":"reset"},{"score":{"name":"@s","objective":"MC_VolumeZ"},"color":"gold"},{"text":"  Volume: ","color":"reset"},{"score":{"name":"@s","objective":"MC_Volume"},"color":"gold"}]
