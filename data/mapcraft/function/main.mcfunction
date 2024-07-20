@@ -10,6 +10,7 @@
 	execute as @e[type=player,tag=MC_Edit,tag=Select,tag=!Draw] at @s run function mapcraft:built_in/selection/main
 	execute as @e[type=player,tag=MC_Edit,tag=!Select,tag=Draw] at @s run function mapcraft:built_in/paintbrush/main
 	execute as @e[type=player,tag=MC_Edit,tag=Select,tag=!Draw,tag=!Is_Moving_Cursor,tag=Fill] at @s if score @s MC_CursorClick matches ..3 run tag @s remove Fill
+# Player fill / copy system
 	execute as @e[type=player,tag=MC_Edit,tag=Select,tag=!Draw,tag=!Is_Moving_Cursor,tag=Fill] at @s if score @s MC_CursorClick matches 4.. run function mapcraft:built_in/fill/main
 	execute as @e[type=player,tag=MC_Edit,tag=Select,tag=!Draw,tag=!Is_Moving_Cursor,tag=Copy] at @s run function mapcraft:built_in/copy/main
 # Player trigger system

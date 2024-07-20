@@ -1,5 +1,5 @@
-
 summon minecraft:marker ~ ~ ~ {data:{ID:0.0d,FillType:0.0d},Invulnerable:1b,Tags:["Fill","Point","X"]}
+
 data modify entity @e[tag=Fill,tag=Point,tag=X,sort=nearest,limit=1] data merge from entity @s data
 execute as @e[tag=Fill,tag=Point,tag=X,sort=nearest,limit=1] store result score @s MC_FillID run data get entity @s data.ID
 

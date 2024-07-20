@@ -93,8 +93,6 @@
 	scoreboard objectives remove MC_CutsceneSaveRy
 
 # Miscellaneous
-	# Buffer zone
-    fill 1 3 -1 -1 6 1 minecraft:stone
 	# Tags
 		tag @e[type=player] remove Select
 		tag @e[type=player] remove Draw

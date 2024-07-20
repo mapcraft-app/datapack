@@ -104,12 +104,6 @@
 	scoreboard objectives add MC_CutsceneSaveRy dummy
 
 # Miscellaneous
-	# Create buffer zone
-	#	fill 1 0 -1 -1 7 1 minecraft:bedrock
-	#	setblock 0 1 0 minecraft:air
-	#	setblock 0 3 0 minecraft:air
-	#	setblock 0 5 0 minecraft:air
-	#	setblock 0 6 0 minecraft:air
 	# Tags
 		tag @e[type=player] add Select
 		tag @e[type=player] remove Draw
@@ -143,6 +137,6 @@
 		team add MC_NoClip
 		team modify MC_NoClip collisionRule never
 # Gamerule
-	#gamerule commandBlockOutput false
-	#gamerule maxCommandChainLength 1000000000
-	#gamerule sendCommandFeedback false
+	gamerule commandBlockOutput false
+	gamerule maxCommandChainLength 1000000000
+	gamerule sendCommandFeedback false
