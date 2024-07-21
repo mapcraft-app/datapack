@@ -93,6 +93,8 @@
 	scoreboard objectives remove MC_CutsceneSaveRy
 
 # Miscellaneous
+	# Forceload
+		forceload remove 0 0 0 0
 	# Tags
 		tag @e[type=player] remove Select
 		tag @e[type=player] remove Draw

@@ -104,6 +104,8 @@
 	scoreboard objectives add MC_CutsceneSaveRy dummy
 
 # Miscellaneous
+	# Forceload
+		forceload add 0 0 0 0
 	# Tags
 		tag @e[type=player] add Select
 		tag @e[type=player] remove Draw
