@@ -71,8 +71,8 @@ void cube(int width, std::string dir)
 				cloneCommand = "clone ";
 				cloneCommand += (isInside(x, y, z, point)) ? "~ -63 ~ ~ -63 ~" : "~ -64 ~ ~ -64 ~";
 				cloneCommand += " " + position + "replace force";
-				air << "execute if block " << position << "#minecraft:air run " << cloneCommand << std::endl;
-				block << "execute unless block " << position << "#minecraft:air run " << cloneCommand << std::endl;
+				air << "execute if block " << position << "#mapcraft:air run " << cloneCommand << std::endl;
+				block << "execute unless block " << position << "#mapcraft:air run " << cloneCommand << std::endl;
 				all << cloneCommand << std::endl;
 			}
 		}
@@ -140,8 +140,8 @@ void diamond(int width, std::string dir)
 				cloneCommand += ((x == min || x == max) && (y == min || y == max)) ? "~ -63 ~ ~ -63 ~" : "~ -64 ~ ~ -64 ~";
 				cloneCommand += " " + position + "replace force";
 
-				air << "execute if block " << position << "#minecraft:air run " << cloneCommand << std::endl;
-				block << "execute unless block " << position << "#minecraft:air run " << cloneCommand << std::endl;
+				air << "execute if block " << position << "#mapcraft:air run " << cloneCommand << std::endl;
+				block << "execute unless block " << position << "#mapcraft:air run " << cloneCommand << std::endl;
 				all << cloneCommand << std::endl;
 			}
 		}

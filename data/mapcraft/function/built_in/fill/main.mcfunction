@@ -35,6 +35,8 @@ execute as @e[tag=Fill,tag=Compare] if score @s MC_FillID = @p[distance=0] MC_Pl
 execute as @e[tag=Fill,tag=Point,tag=X] if score @s MC_FillID = @p[distance=0] MC_PlayerID at @s run function mapcraft:built_in/fill/x
 
 # Reset
+execute at @e[tag=Cursor,tag=One] if score @e[type=magma_cube,distance=0,sort=nearest,limit=1] MC_CursorTemp = @s MC_PlayerID positioned 0 -63 0 run setblock ~ ~ ~ minecraft:bedrock
+execute at @e[tag=Cursor,tag=One] if score @e[type=magma_cube,distance=0,sort=nearest,limit=1] MC_CursorTemp = @s MC_PlayerID positioned 0 -64 0 run setblock ~ ~ ~ minecraft:bedrock
 execute as @e[tag=Fill,tag=Compare] if score @s MC_FillID = @p[distance=0] MC_PlayerID at @s run kill @s
 tag @s remove Cut
 tag @s remove Fill
